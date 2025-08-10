@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  /* using px does not change when someone ise using bigger/smaller browser settings */
+  font-size: 30px;
+}
+h1 {
+  border: 2px dashed red;
+  width: 50% /* this is relative to its parent*/;
+}
+main {
+  font-size: 2rem; /* this is relative to the **root** element, which is html */
+  width: 50vw;
+  background-color: skyblue;
+}
+p {
+  font-size: 2em; /* this is relative to the **parent** element, which is html */
+}
+body {
+  min-height: 100vh; /* this allows for scrolling, if content grows. just **height: 100vh** doesnt allow */
+}
