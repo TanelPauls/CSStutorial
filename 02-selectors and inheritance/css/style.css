@@ -1,0 +1,52 @@
+* {
+  /* this is a universal selector */
+  margin: 5px;
+  padding: 0;
+  font-family: monospace;
+  border: 1px solid red; /* this rule **IS GLOBALL** and not inheritance */
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit; /* we need to specifically say to inherit, bc they dont without */
+}
+html {
+  /* we can use html/body/main */
+  border: 3px solid red;
+}
+body {
+  font-size: 22px; /* this rule **IS** inherited */
+  border: 3px solid black; /* this rule **IS NOT** inherited */
+}
+h1,
+h2 {
+  color: blue;
+}
+p {
+  color: purple;
+}
+p {
+  /* this one overrules the previous one, because its under it */
+  color: black;
+}
+p span {
+  /* nesting */
+  /* Presenter claims it would be smarter to apply clas to the span */
+  text-transform: uppercase;
+  background-color: gold;
+}
+.highlight {
+  /* this is a class */
+  color: red;
+}
+/* this one overrules the previous one, because its more specific */
+.gray {
+  color: gray;
+}
+/* this one overrules all the previous ones 
+Presentator claims its not good to use id's in css for some reason.*/
+#second {
+  font-style: italic;
+}
