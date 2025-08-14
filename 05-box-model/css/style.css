@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  this setting sets box width to 400px (from h1) */
+}
+.container {
+  border: 2px dashed red;
+  border-top: 5px solid;
+  border-right: 10px dotted green;
+  border-left: 10px double;
+  font-size: 1.5rem;
+  padding: 1em 2em 3em 4em;
+  margin: 1.5rem 2em 2em;
+  /* margin-top: 1.5em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em; */
+  outline: 5px solid purple; /*  this setting is not part of the  calculations */
+  outline-offset: 5px;
+}
+.container h1 {
+  outline: 5px solid aqua; /*  this setting is not part of the  calculations */
+  outline-offset: -10px;
+}
+.circle {
+  margin: 5rem auto;
+  background-color: gold;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50px; /*  half of height and width*/
+  outline: 2px solid red;
+  outline-offset: 0.25rem; /*  this setting is not part of the  calculations */
+}
