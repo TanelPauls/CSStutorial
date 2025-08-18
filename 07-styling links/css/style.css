@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+/* anchor tag
+   defaault values: blue underlined text for not visited links
+                  purple underlined text for     visited links
+                  hovering on link changes mouse 
+                  clicking on link changes link color to red */
+
+a {
+    text-decoration: none;   /* underline; */
+    cursor:pointer;/* not-allowed; */
+    color: blue;
+}
+/* order of declaring matters here, if hover was before visited, it would not work */
+a:visited{
+    color: purple;
+}
+a:hover, a:focus{
+    color: dodgerblue;
+}
+a:active{
+    color:red;
+}
