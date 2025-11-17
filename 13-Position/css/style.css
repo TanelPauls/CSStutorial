@@ -57,6 +57,7 @@ body {
   position: sticky;
   top: 0;
 }
+html { scroll-behavior: smooth;}
 
 section {
   height: 100vh;
@@ -84,4 +85,18 @@ footer {
   background-color: black;
   position: sticky;
   bottom: 0;
+  font-size: 3rem;
+}
+a:visited {
+  color: white;
+}
+.social{
+  background-color: royalblue;
+  font-size: inherit;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1;
 }
