@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;                 /* shrink-wrap to content */
+  align-items: flex-end;                /* all children bottom aligned */
+  gap: 2rem;
+  
+  /* permanent black underline across the whole menu */
+  background-image: linear-gradient(black, black);
+  background-size: 100% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  padding: 0 0 6px;                     /* bottom padding = distance above line */
+  font-size: 18px;
+  line-height: 1.2;                     /* consistent height */
+}
+
+/* red underline only under the hovered item */
+.menu a:hover {
+  background-image: linear-gradient(red, red);
+  background-size: 100% 2px;
+  background-position: left bottom;     /* EXACT same position as black line */
+  background-repeat: no-repeat;
+}
+
+.menuu {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+
+  /* black baseline */
+  background-image: linear-gradient(black, black);
+  background-size: 100% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  line-height: 1.2;
+  padding-bottom: 6px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#all:checked ~ .menuu label[for="all"] span,
+#ny:checked  ~ .menuu label[for="ny"] span,
+#bos:checked ~ .menuu label[for="bos"] span,
+#was:checked ~ .menuu label[for="was"] span {
+  color: orange;
+}
+
+label:hover span {
+  color: orange;
+}
+
+
+label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: transparent;
+}
+
+label:hover::after {
+  background: red;
+}
+
+.option {
+  display: none;
+}
+
+#all:checked ~ .option {
+  display: block;
+}
+
+/* NEW YORK */
+#ny:checked ~ .option-ny {
+  display: block;
+}
+
+/* BOSTON */
+#bos:checked ~ .option-bos {
+  display: block;
+}
+
+/* WASHINGTON */
+#was:checked ~ .option-was {
+  display: block;
+}
