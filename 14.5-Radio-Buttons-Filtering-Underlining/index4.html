@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Material Symbols Hover Fill</title>
+
+  <!-- IMPORTANT: Use "Material Symbols Outlined" VARIABLE font (supports FILL axis) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      padding: 40px;
+    }
+
+    /* The hoverable row */
+    .row {
+      width: 320px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 12px 44px 12px 12px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .row:hover {
+      background: #eeeeee;
+    }
+
+    /* Material Symbols base style (outlined / empty) */
+    .pin {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+
+      /* Must use the variable font family */
+      font-family: "Material Symbols Outlined";
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+
+    /* On hover: make it filled */
+    .row:hover .pin {
+      font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    Hover me
+    <span class="pin" aria-hidden="true">location_on</span>
+  </div>
+</body>
+</html>

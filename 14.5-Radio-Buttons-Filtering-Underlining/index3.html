@@ -1,0 +1,50 @@
+<a class="link" href="#">
+    <span class="icon material-symbols-outlined">
+      location_on
+    </span>
+    <span class="text">
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumping
+      Wrapping text that can go onto multiple lines without jumpingWrapping text that can go onto multiple lines without jumpingWrapping text that can go onto multiple lines without jumpingWrapping text that can go onto multiple lines without jumpingWrapping text that can go onto multiple lines without jumpingWrapping text that can go onto multiple lines without jumping
+    </span>
+  </a>
+  
+
+
+<style>
+
+.link {
+  display: inline-flex;
+  align-items: flex-start;   /* align icon with first text line */
+  gap: .5rem;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1em;            /* match text size */
+  line-height: 1;            /* prevent vertical drift */
+  margin-top: .15em;         /* baseline correction */
+  flex-shrink: 0;
+}
+
+.text {
+  line-height: 1.4;
+
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
+  text-decoration-color: transparent;
+}
+
+.link:hover .text,
+.link:focus-visible .text {
+  text-decoration-color: currentColor;
+}
+
+
+</style>
